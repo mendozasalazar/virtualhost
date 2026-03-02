@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Aarón Abraham Mendoza Salazar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .letter-container {
+            width: 100%;
+            max-width: 215.9mm;
+            min-height: 279.4mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        @media print {
+            body { background: white; }
+            .letter-container { box-shadow: none; max-width: 100%; width: 100%; margin: 0; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="py-4 print:py-0 text-gray-800 relative">
+
+    <!-- Botón flotante para descargar PDF -->
+    <div class="fixed bottom-6 right-6 no-print z-50">
+        <button onclick="descargarPDF()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-2xl flex items-center gap-2 transition-all cursor-pointer">
+            <i class="fas fa-file-pdf"></i> Descargar PDF
+        </button>
+    </div>
+
+    <div id="cv-content" class="letter-container flex flex-col md:flex-row overflow-hidden rounded-lg print:rounded-none">
+        
+        <!-- Columna Izquierda (Sidebar) -->
+        <aside class="w-full md:w-1/3 bg-slate-800 text-white p-6 flex flex-col gap-6">
+            <!-- Foto / Nombre (Mobile) -->
+            <div class="flex flex-col items-center text-center">
+                <a id="profile-img-container" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRR4zuUvHffpu3fMyQPevxP_qOeAnPu03VBPBUp-TWdb5AksnQ8O_-XoDQ1OyBiKetwpfxQqi8m-71dHyDkUEImM2a80ns77jk7g8bRUM93qtxfRKBo_SrAGgUnSC08pfXo4pwgaw4xMDf_HhTyyOzEBm8NY6oBhqLKWsFgLkn74uCBgiu3neCPEqeh8_b/s1600/Foto_Perfil.png" target="_blank" title="ver imagen de perfil" class="w-28 h-28 rounded-full border-4 border-slate-400 mb-3 bg-cover bg-center bg-no-repeat shadow-inner block hover:opacity-90 transition-opacity cursor-pointer" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRR4zuUvHffpu3fMyQPevxP_qOeAnPu03VBPBUp-TWdb5AksnQ8O_-XoDQ1OyBiKetwpfxQqi8m-71dHyDkUEImM2a80ns77jk7g8bRUM93qtxfRKBo_SrAGgUnSC08pfXo4pwgaw4xMDf_HhTyyOzEBm8NY6oBhqLKWsFgLkn74uCBgiu3neCPEqeh8_b/s1600/Foto_Perfil.png');">
+                </a>
+                <h1 class="text-xl font-bold uppercase tracking-wide">Aarón Abraham</h1>
+                <h2 class="text-lg font-light uppercase tracking-widest text-slate-300 mb-1">Mendoza Salazar</h2>
+            </div>
+
+            <!-- Contacto -->
+            <div>
+                <h3 class="text-md font-semibold uppercase tracking-wider border-b border-slate-600 pb-1 mb-3">Contacto</h3>
+                <ul class="space-y-2 text-xs font-light">
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-map-marker-alt mt-0.5 w-4 text-center"></i>
+                        <span>Altamira, Tamaulipas, México</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-mobile-alt mt-0.5 w-4 text-center"></i>
+                        <span>833 251 39 27</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-envelope mt-0.5 w-4 text-center"></i>
+                        <a href="mailto:mendozasalazar@proton.me" class="hover:text-blue-300 transition-colors">mendozasalazar@proton.me</a>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-globe mt-0.5 w-4 text-center"></i>
+                        <a href="http://www.mendozasalazar.com" target="_blank" class="hover:text-blue-300 transition-colors">www.mendozasalazar.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Habilidades -->
+            <div>
+                <h3 class="text-md font-semibold uppercase tracking-wider border-b border-slate-600 pb-1 mb-3">Habilidades / Aptitudes</h3>
+                <ul class="space-y-1 text-xs font-light list-disc list-inside">
+                    <li>Atención al cliente</li>
+                    <li>Creador de contenido digital</li>
+                    <li>Diseño y edición (imagen)</li>
+                </ul>
+            </div>
+
+            <!-- Computación -->
+            <div>
+                <h3 class="text-md font-semibold uppercase tracking-wider border-b border-slate-600 pb-1 mb-3">Computación</h3>
+                <ul class="space-y-1 text-xs font-light list-disc list-inside">
+                    <li>Gemini IA</li>
+                    <li>Excel</li>
+                    <li>Word</li>
+                    <li>Canvas</li>
+                </ul>
+            </div>
+
+            <!-- Logros -->
+            <div>
+                <h3 class="text-md font-semibold uppercase tracking-wider border-b border-slate-600 pb-1 mb-3">Logros / Reconocimientos</h3>
+                <ul class="space-y-1 text-xs font-light">
+                    <li class="flex flex-col gap-0.5">
+                        <span class="font-medium text-blue-300">Protocolos de atención y servicio</span>
+                        <a href="https://bit.ly/3Ax9iMJ" target="_blank" class="hover:underline text-[10px] break-all text-slate-400">Certificado https://bit.ly/3Ax9iMJ</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Columna Derecha (Contenido Principal) -->
+        <main class="w-full md:w-2/3 bg-white p-6 flex flex-col gap-4">
+            
+            <!-- Experiencia -->
+            <section>
+                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest border-b-2 border-blue-500 pb-1 mb-4 flex items-center gap-2">
+                    <i class="fas fa-briefcase text-blue-500"></i> Experiencia
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- Arteli -->
+                    <div class="relative pl-3 border-l-2 border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-blue-500 rounded-full -left-[6px] top-1.5"></div>
+                        <h3 class="text-md font-bold text-slate-800 leading-tight">TIENDA DE DESCUENTO ARTELI, S.A. DE C.V.</h3>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-500 font-medium mb-1 mt-1">
+                            <span><i class="fas fa-map-marker-alt"></i> CD. Madero, Tamaulipas</span>
+                            <span>|</span>
+                            <span><i class="fas fa-calendar-alt"></i> Septiembre 4, 2022 – presente</span>
+                        </div>
+                        <p class="text-xs font-semibold text-blue-600 mb-1">Área de Abarrotes</p>
+                        <p class="text-xs text-gray-700 text-justify mb-1 leading-snug">
+                            Actividad específica Auditoría de Huecos: Esta función tiene un enfoque técnico cuyo objetivo no es únicamente identificar los espacios sin productos, sino sincronizar la realidad física del anaquel con el inventario virtual, permitiendo detonar correctamente los algoritmos de reabastecimiento, optimizar la disponibilidad de producto y reducir quiebres de stock.
+                        </p>
+                        <p class="text-xs text-gray-700 text-justify leading-snug">
+                            Esta labor ha fortalecido mis habilidades de análisis operativo, control de procesos y trabajo bajo objetivos medibles.
+                        </p>
+                    </div>
+
+                    <!-- Casa Aby -->
+                    <div class="relative pl-3 border-l-2 border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-blue-500 rounded-full -left-[6px] top-1.5"></div>
+                        <h3 class="text-md font-bold text-slate-800 leading-tight">CASA ABY “SASTRERÍA, VENTA Y ALQUILER”</h3>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-500 font-medium mb-1 mt-1">
+                            <span><i class="fas fa-map-marker-alt"></i> Naucalpan, Estado de México</span>
+                            <span>|</span>
+                            <span><i class="fas fa-calendar-alt"></i> Febrero 2022 – Diciembre 2022</span>
+                        </div>
+                        <p class="text-xs font-semibold text-blue-600 mb-1">Community Manager</p>
+                        <p class="text-xs text-gray-600 mb-1 leading-snug">Contacto: 55 30 85 20 01</p>
+                        <p class="text-xs text-gray-700 leading-snug">
+                            Trabajo remoto. Creación y edición de campañas y publicidad digital en redes sociales.
+                        </p>
+                    </div>
+
+                    <!-- Servicio Social -->
+                    <div class="relative pl-3 border-l-2 border-slate-200">
+                        <div class="absolute w-2.5 h-2.5 bg-blue-500 rounded-full -left-[6px] top-1.5"></div>
+                        <h3 class="text-md font-bold text-slate-800 leading-tight">SERVICIO SOCIAL UAT – COORDINACIÓN DE VALORES</h3>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-500 font-medium mb-1 mt-1">
+                            <span><i class="fas fa-map-marker-alt"></i> Tampico, Tamaulipas, México</span>
+                        </div>
+                        <p class="text-xs font-semibold text-blue-600 mb-0.5">Asistente de oficina</p>
+                        <a href="https://bit.ly/3AD0hC9" target="_blank" class="text-xs text-blue-500 hover:underline block mb-1 break-all">Certificación PDF en https://bit.ly/3AD0hC9</a>
+                        <p class="text-xs text-gray-700 leading-snug">
+                            Funciones: Atención al público, archivar documentos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educación -->
+            <section class="mt-2">
+                <h2 class="text-xl font-bold text-slate-800 uppercase tracking-widest border-b-2 border-blue-500 pb-1 mb-4 flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-blue-500"></i> Educación
+                </h2>
+                
+                <div class="grid grid-cols-1 gap-2.5">
+                    <!-- Universidad -->
+                    <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                        <h3 class="font-bold text-slate-800 text-sm">UNIVERSIDAD. Licenciado en Ciencias de la Comunicación</h3>
+                        <p class="text-xs text-slate-600 mt-0.5">Universidad Autónoma de Tamaulipas | Tampico, Tamaulipas, México</p>
+                        <span class="text-[10px] text-slate-500 font-semibold mt-0.5 inline-block">[Carta de pasante, solicitar la original o copia]</span>
+                    </div>
+
+                    <!-- Google -->
+                    <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                        <h3 class="font-bold text-slate-800 text-sm">GOOGLE. Fundamentos de Marketing Digital</h3>
+                        <p class="text-xs text-slate-600 mt-0.5">Curso online | 2026 – en curso</p>
+                    </div>
+
+                    <!-- Fundación Carlos Slim -->
+                    <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                        <h3 class="font-bold text-slate-800 text-sm">FUNDACIÓN CARLOS SLIM. Diplomado Técnico en Business Intelligence</h3>
+                        <p class="text-xs text-slate-600 mt-0.5">Diplomado online | 2026 – en curso</p>
+                    </div>
+
+                    <!-- Bachillerato -->
+                    <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                        <h3 class="font-bold text-slate-800 text-sm">BACHILLERATO. Certificado</h3>
+                        <p class="text-xs text-slate-600 mt-0.5">Colegio de Bachilleres del Estado de Tamaulipas, plantel 04 | Tampico, Tamaulipas, México | 2002 – 2005</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                        <!-- Secundaria -->
+                        <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                            <h3 class="font-bold text-slate-800 text-xs">SECUNDARIA. Certificado</h3>
+                            <p class="text-[10px] text-slate-600 mt-0.5">Francisco J. Múgica | Altamira, Tamaulipas | 1999 – 2002</p>
+                        </div>
+
+                        <!-- Primaria -->
+                        <div class="bg-slate-50 p-3 rounded-md border border-slate-100">
+                            <h3 class="font-bold text-slate-800 text-xs">PRIMARIA. Certificado</h3>
+                            <p class="text-[10px] text-slate-600 mt-0.5">Juan Camacho Cervantes | Altamira, Tamaulipas | 1993 – 1999</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        async function descargarPDF() {
+            const btn = document.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparando...';
+            
+            const element = document.getElementById('cv-content');
+            const imgContainer = document.getElementById('profile-img-container');
+            const originalBg = imgContainer.style.backgroundImage;
+            
+            try {
+                // Solución al bloqueo de seguridad local (file:///)
+                // Extraemos la URL y la descargamos en memoria local antes de generar el PDF
+                const urlMatch = originalBg.match(/url\(['"]?(.*?)['"]?\)/);
+                if (urlMatch && urlMatch[1]) {
+                    const response = await fetch(urlMatch[1]);
+                    const blob = await response.blob();
+                    
+                    const base64Url = await new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => resolve(reader.result);
+                        reader.readAsDataURL(blob);
+                    });
+                    
+                    // Asignamos el fondo local temporalmente
+                    imgContainer.style.backgroundImage = `url('${base64Url}')`;
+                }
+            } catch (error) {
+                console.warn('Error al preprocesar la imagen. Se intentará usar el método por defecto.', error);
+            }
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generando...';
+            
+            const opt = {
+                margin:       0,
+                filename:     'CV_AARON_MENDOZA.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restauramos el código original al terminar la descarga
+                imgContainer.style.backgroundImage = originalBg;
+                btn.innerHTML = originalText;
+            });
+        }
+    </script>
+</body>
+</html>
